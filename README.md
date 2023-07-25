@@ -3,15 +3,14 @@
 ## To build and run
 
 ```sh
-docker build -t pgembedding-db .
-docker run -v pgdata:/var/lib/postgresql/data -p 5432:5432 pgembedding-db
-psql -U pgembeddings -h localhost pgembeddings
+docker build -t pgembedding-img .
+docker run -v pgdata:/var/lib/postgresql/data -p 5432:5432 pgembedding-img
 ```
 
 ## To connect CLI to instance
 
 ```sh
-psql -U pgembeddings -h localhost pgembeddings
+psql -U pgembeddings_user -h localhost pgembeddings_db
 ```
 # created by MenkeTechnologies
 

@@ -1,8 +1,8 @@
 FROM postgres
 
-ENV POSTGRES_USER pgembeddings
+ENV POSTGRES_USER pgembeddings_user
 ENV POSTGRES_PASSWORD pgembeddings
-ENV POSTGRES_DB pgembeddings
+ENV POSTGRES_DB pgembeddings_db
 
 RUN apt update
 RUN apt install -y git make gcc g++ postgresql-server-dev-15 bash
@@ -13,3 +13,6 @@ ENV LANG en_US.utf8
 USER postgres
 EXPOSE 5432
 ENTRYPOINT ["/bin/bash", "-x", "/usr/local/bin/docker-entrypoint.sh", "postgres"]
+
+
+
